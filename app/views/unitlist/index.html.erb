@@ -7,6 +7,7 @@
   <ul>
     <li ng-repeat="unit in units">
       {{unit.title}}
+	  <a href = '' ng-click="deleteUnit(unit.id,$index)">Delete</a>
     </li>
   </ul>
 </div>
