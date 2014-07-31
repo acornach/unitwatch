@@ -8,6 +8,10 @@ app.factory('Unit', ['$resource', function($resource) {
   Unit.prototype.delete = function(stId){
 	this.service.remove({unitId: stId});
   };
+  Unit.prototype.create = function(attr) {
+    return this.service.save(attr);
+  }
+  
   
   return new Unit;
 }]);

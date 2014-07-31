@@ -5,6 +5,10 @@ class UnitsController < ApplicationController
     respond_with Unit.all
   end
 	
+  def create
+	respone_with Unit.create(unit_params)
+  end
+  
   def destroy
 	respond_with Stock.destroy(unit_params)
   end
