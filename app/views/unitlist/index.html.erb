@@ -1,0 +1,12 @@
+<h1>Unitlist</h1>
+<form>
+  <input type="text" ng-model='newSymbol' placeholder="Enter a symbol">
+  <input type="submit" value="Add">
+</form>
+<div ng-controller="UnitsCtrl">
+  <ul>
+    <li ng-repeat="unit in units">
+      {{unit.title}}
+    </li>
+  </ul>
+</div>
