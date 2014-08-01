@@ -1,0 +1,21 @@
+<h1>Unitlist</h1>
+<div ng-controller="UnitsCtrl">
+  <ul>
+    <li ng-repeat="unit in units">
+    <strong>  {{unit.title}} </strong>
+	  
+	  
+	  
+	  <div id="navcontainer" ng-controller="ChaptersCtrl" ng-init="init(unit.id)">
+  <ul>
+    <li ng-repeat="chapter in chapters">
+      <div>{{chapter.title}}</div> 
+    </li>
+  </ul>
+</div>
+
+
+
+    </li>
+  </ul>
+</div>

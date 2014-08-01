@@ -1,3 +1,26 @@
 // Place all the styles related to the unitlist controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#navcontainer ul { 
+margin: 0;
+
+padding: 0;
+list-style-type: none;
+}
+
+#navcontainer ul li { display: inline;
+}
+
+#navcontainer ul li div{ 
+display: inline; 
+text-decoration: none;
+padding: .2em 1em;
+color: #fff;
+background-color: #036;
+}
+
+#navcontainer ul li div:hover
+{
+color: #fff;
+background-color: #369;
+}

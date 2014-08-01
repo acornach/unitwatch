@@ -8,7 +8,7 @@ class UnitsController < ApplicationController
   def create
 	respond_with Unit.create(unit_params)
   end
-  
+   
   def show
 	@unit = Unit.find(params[:id])
 	@chapters = @unit.chapters
