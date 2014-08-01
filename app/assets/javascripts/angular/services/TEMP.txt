@@ -1,0 +1,18 @@
+app.factory('Chapter', 'Unit' ['$resource', function($resource, Unit) {
+  function Chapter() {
+     this.service = $resource('/api/units/'+Unit+'chapters/:chapterid', {chapterId: '@id'});
+  };
+  Chapter.prototype.all = function() {
+  	console.log("in Chapter.prototype.all");
+    return this.service.query();
+  };
+  Chapter.prototype.delete = function(stId){
+	this.service.remove({chapterId: stId});
+  };
+  Chapter.prototype.create = function(attr) {
+    return this.service.save(attr);
+  }
+  
+  
+  return new Chapter;
+}]);

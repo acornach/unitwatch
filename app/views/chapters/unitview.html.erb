@@ -1,0 +1,14 @@
+<h1>Unitlist</h1>
+<h3><%= @unit.title %></h3>
+<div ng-controller="ChaptersCtrl" ng-init="init(<%= @unit.id %>)">
+  <ul>
+    <li ng-repeat="chapter in chapters">
+      {{chapter.title}}
+	  <a href = '' ng-click="deleteChapter(chapter.id,$index)">Delete</a>
+    </li>
+  </ul>
+  <form ng-submit="createChapter()">
+  <input type="text" ng-model='newSymbol' placeholder="Enter a symbol">
+  <input type="submit" value="Add">
+</form>
+</div>

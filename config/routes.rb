@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  
 
   scope :api do
 	resources :units, defaults: {format: :json} do

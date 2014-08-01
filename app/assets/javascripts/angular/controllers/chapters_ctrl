@@ -1,0 +1,16 @@
+app.controller('ChaptersCtrl', ['$scope', 'Chapter', function($scope, Chapter) {
+  $scope.chapters = Chapter.all();
+  
+  $scope.deleteChapter = function(id,idx){
+	Chapter.delete(id);
+	$scope.chapters.splice(idx,1);
+  };
+  
+  $scope.createChapter = function() {
+	var attr = {};
+	attr.symbol = $scope.newSymbol;
+	var newChapter = Chapter.create(attr);
+	$scope.chapters.push(newChapter);
+	$scope.newSymbol = "";
+  };
+}]);
