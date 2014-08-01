@@ -10,7 +10,7 @@ app.factory('Unit', ['$resource', function($resource) {
   };
   Unit.prototype.create = function(attr) {
     return this.service.save(attr);
-  }
+  };
   
   
   return new Unit;

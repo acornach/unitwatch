@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
 
+  
+
   scope :api do
-	resources :units, defaults: {format: :json}
+	resources :units, defaults: {format: :json} do
+		resources :chapters, defaults: {format: :json} 
+	end
+	resources :chapters, defaults: {format: :json} do
+		resources :bullets, defaults: {format: :json}
+	end
   end
   get 'unitlist/index'
   root 'unitlist#index'

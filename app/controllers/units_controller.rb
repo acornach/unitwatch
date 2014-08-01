@@ -6,11 +6,16 @@ class UnitsController < ApplicationController
   end
 	
   def create
-	respone_with Unit.create(unit_params)
+	respond_with Unit.create(unit_params)
+  end
+  
+  def show
+	@unit = Unit.find(params[:id])
+	@chapters = @unit.chapters
   end
   
   def destroy
-	respond_with Stock.destroy(unit_params)
+	respond_with Unit.destroy(unit_params)
   end
   
   private

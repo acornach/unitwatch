@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731095810) do
+ActiveRecord::Schema.define(version: 20140801040625) do
+
+  create_table "chapters", force: true do |t|
+    t.string   "title"
+    t.integer  "unit_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "chapters", ["unit_id"], name: "index_chapters_on_unit_id"
 
   create_table "units", force: true do |t|
     t.string   "title"
