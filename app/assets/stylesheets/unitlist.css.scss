@@ -29,7 +29,7 @@ h1 {
 
 .book {
     float: left;
-    
+    z-index:100;
     margin: 0;
     margin-right: 10px;
     padding: 0;
@@ -37,7 +37,7 @@ h1 {
     
     width: 150px;
     height: 150px;
-    
+    background-color: gold;
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     -ms-transition: opacity 0.2s;
@@ -45,21 +45,16 @@ h1 {
     -webkit-transition: opacity 0.2s;
 }
 .book:hover {
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
-.book:hover {
-    opacity: 0.5;
-}
-.book:nth-child(1) {
-    background-color: gold;
-}
+
 
 .left, .right {
     position: absolute;
     color: white;
-    font-size: 48px;
-    top: 57px;
+    font-size: 96px;
+    top: 27px;
     
     cursor: pointer;
     z-index: 1;
@@ -70,3 +65,19 @@ h1 {
 .right {
     right: 0;
 }
+
+.bulletDiv {
+	font-size: 9pt;
+}
+
+.book .bulletDiv {
+	z-index:1001;
+	visibility: hidden;
+
+}
+
+.book:hover .bulletDiv {
+	visibility: visible;
+	z-index:1001;
+}
+

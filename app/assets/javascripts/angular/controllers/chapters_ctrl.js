@@ -9,10 +9,10 @@ app.controller('ChaptersCtrl', ['$scope', '$resource', function($scope,$resource
     //Based on passed argument you can make a call to resource
     //and initialize more objects
     //$resource.getMeBond(007)
-	console.log(id);
+	//console.log(id);
 	
      $scope.chapters = $resource('/api/units/'+id+'/chapters/').query();
-    console.log($scope.chapters);
+    //console.log($scope.chapters);
   };
 
   

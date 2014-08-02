@@ -9,7 +9,14 @@
 			<div id="right{{unit.id}}" class="right">&gt;</div>
 			<div class="track" id="track{{unit.id}}">
 				<div ng-repeat="chapter in chapters">
-					<div class="book">{{chapter.title}}</div> 
+					<div class="book">{{chapter.title}}
+					
+						<div ng-controller="BulletsCtrl" ng-init="init(chapter.id)">
+							<div class="bulletDiv" ng-repeat="bullet in bullets">
+								<a href='' > * {{bullet.bullet}}</a>
+							</div>
+						</div>
+					</div> 
 				</div>
 			</div>
 		</div>

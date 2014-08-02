@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 		resources :bullets, defaults: {format: :json}
 	end
   end
+  
   get 'unitlist/testview'
   get 'unitlist/index'
   root 'unitlist#index'
