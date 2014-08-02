@@ -1,20 +1,18 @@
-<h1>Unitlist</h1>
+<h1>FYE Manual</h1>
 <div ng-controller="UnitsCtrl">
   <ul>
     <li ng-repeat="unit in units">
     <strong>  {{unit.title}} </strong>
 	  
-	  
-	  
-	  <div id="navcontainer" ng-controller="ChaptersCtrl" ng-init="init(unit.id)">
-  <ul>
-    <li ng-repeat="chapter in chapters">
-      <div>{{chapter.title}}</div> 
-    </li>
-  </ul>
-</div>
-
-
+		<div class="slider" ng-controller="ChaptersCtrl" ng-init="init(unit.id)">
+		    <div id="left{{unit.id}}" class="left">&lt;</div>
+			<div id="right{{unit.id}}" class="right">&gt;</div>
+			<div class="track" id="track{{unit.id}}">
+				<div ng-repeat="chapter in chapters">
+					<div class="book">{{chapter.title}}</div> 
+				</div>
+			</div>
+		</div>
 
     </li>
   </ul>

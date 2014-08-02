@@ -1,26 +1,72 @@
 // Place all the styles related to the unitlist controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#navcontainer ul { 
-margin: 0;
-
-padding: 0;
-list-style-type: none;
+h1 {
+	text-align: center;
+}
+.slider {
+    position: relative;
+    
+    background-color: blue;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    
+    overflow: hidden;
 }
 
-#navcontainer ul li { display: inline;
+.track {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    width: 2000px;
 }
 
-#navcontainer ul li div{ 
-display: inline; 
-text-decoration: none;
-padding: .2em 1em;
-color: #fff;
-background-color: #036;
+.book {
+    float: left;
+    
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+    border: 0;
+    
+    width: 150px;
+    height: 150px;
+    
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+}
+.book:hover {
+    opacity: 0.5;
 }
 
-#navcontainer ul li div:hover
-{
-color: #fff;
-background-color: #369;
+.book:hover {
+    opacity: 0.5;
+}
+.book:nth-child(1) {
+    background-color: gold;
+}
+
+.left, .right {
+    position: absolute;
+    color: white;
+    font-size: 48px;
+    top: 57px;
+    
+    cursor: pointer;
+    z-index: 1;
+}
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
 }

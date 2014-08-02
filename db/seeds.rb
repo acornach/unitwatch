@@ -10,8 +10,8 @@
 #Unit.create!(title: 'Unit 2: Social Health and Wellness')
 #Unit.create!(title: 'Unit 3: Beyond College')
 #Chapter.delete_all
-#Chapter.create!(title: 'Welcome To FYE Manual',unit_id: 1)
-#Chapter.create!(title: 'General Things To Know',unit_id: 1)
+Chapter.create!(title: 'Welcome To FYE Manual',unit_id: 1)
+Chapter.create!(title: 'General Things To Know',unit_id: 1)
 Chapter.create!(title: 'Before The First Day of Class', unit_id: 2)
 Chapter.create!(title: 'Your Advisor and You', unit_id: 2)
 Chapter.create!(title: 'FERPA and Student Code of Conduct', unit_id: 2)
