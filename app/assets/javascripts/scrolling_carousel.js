@@ -1,4 +1,7 @@
 setInterval(function() {
+
+//TODO: This might be where infinite tracking is implemented, or an angular directive
+
     var left1 = parseInt($('#track1').css('left')),
         left2 = parseInt($('#track2').css('left')),
         left3 = parseInt($('#track3').css('left'));

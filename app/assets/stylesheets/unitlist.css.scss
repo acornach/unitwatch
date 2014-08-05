@@ -12,14 +12,14 @@ h1 {
     margin: 10px;
     padding: 10px;
     
-    overflow: hidden;
+    #overflow-y: hidden;
 }
 
 .track {
     position: absolute;
     top: 10px;
     left: 10px;
-    
+    z-index: 100;
     margin: 0;
     padding: 0;
     border: 0;
@@ -57,7 +57,7 @@ h1 {
     top: 27px;
     
     cursor: pointer;
-    z-index: 1;
+    z-index: 1002;
 }
 .left {
     left: 0;
@@ -66,20 +66,38 @@ h1 {
     right: 0;
 }
 
-.bulletDiv {
-	font-size: 9pt;
+.floatingOverDiv
+{
+
+ position: absolute;
+ overflow: none;
+  opacity: .9;
+
 }
 
+.bulletDiv {
+	font-size: 10pt;
+	position: relative;
+	
+}
+
+
 .book .bulletDiv {
-	z-index:1001;
+
 	visibility: hidden;
 	overflow: none;
+
+}
+
+.book:hover .floatingOverDiv{
+transition-delay: 0.5s;
+ background-color: white;
 
 }
 
 .book:hover .bulletDiv {
 	transition-delay: 0.5s;
 	visibility: visible;
-	z-index:1001;
+
 }
 

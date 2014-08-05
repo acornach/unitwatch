@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   end
   
   get 'unitlist/testview'
+  get 'unitlist/modalview'
+  get 'unitlist/tooltipview'
   get 'unitlist/index'
   root 'unitlist#index'
   # The priority is based upon order of creation: first created -> highest priority.

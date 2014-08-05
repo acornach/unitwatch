@@ -1,0 +1,46 @@
+<h1>FYE Manual</h1>
+<div ng-controller="UnitsCtrl">
+  <ul>
+    <li ng-repeat="unit in units">
+    <strong>  {{unit.title}} </strong>
+		
+		<div class="slider" ng-controller="ChaptersCtrl" ng-init="init(unit.id)">
+		    <div id="left{{unit.id}}" class="left">&lt;</div>
+			<div id="right{{unit.id}}" class="right">&gt;</div>
+			<div class="track" id="track{{unit.id}}">
+			<div ng-repeat="chapter in chapters">
+				<div class="book">{{chapter.title}}
+					<div ng-controller="BulletsCtrl" ng-init="init(chapter.id)">
+
+						<!--  BEGIN MODAL DIALOG CREATION -->
+							<div ng-controller="BulletsModalCtrl" ng-init="init(bullets)" class="bulletDiv">
+
+								<script type="text/ng-template" id="myModalContent.html">
+
+									<div class="modal-body bulletDiv">
+										<ul>
+											<li ng-repeat="item in items">
+												<a href='http://www.uaf.edu/' > * {{item.bullet}}</a>
+											</li>
+										</ul>
+
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-primary" ng-click="ok()">OK</button>
+									</div>
+								</script>
+
+								<button class="btn btn-default" ng-click="open()">Open me!</button>
+
+							</div>
+														
+					</div>
+				</div> 
+			</div>
+				
+			</div>
+		</div>
+
+    </li>
+  </ul>
+</div>

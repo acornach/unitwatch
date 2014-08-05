@@ -3,22 +3,31 @@
   <ul>
     <li ng-repeat="unit in units">
     <strong>  {{unit.title}} </strong>
-	  
+		
 		<div class="slider" ng-controller="ChaptersCtrl" ng-init="init(unit.id)">
 		    <div id="left{{unit.id}}" class="left">&lt;</div>
 			<div id="right{{unit.id}}" class="right">&gt;</div>
 			<div class="track" id="track{{unit.id}}">
-				<div ng-repeat="chapter in chapters">
-					<div class="book">{{chapter.title}}
-					
-						<div ng-controller="BulletsCtrl" ng-init="init(chapter.id)">
-							<div class="bulletDiv" ng-repeat="bullet in bullets">
-									<a href='' > * {{bullet.bullet}}</a>
-							</div>
+			
+				
+						<div ng-repeat="chapter in chapters">
+							<div class="book">{{chapter.title}}
+							
+									<div ng-controller="BulletsCtrl" ng-init="init(chapter.id)">
+
+										<div class="floatingOverDiv">
+											<div class="bulletDiv" ng-repeat="bullet in bullets">
+													<a href='http://www.uaf.edu/' > * {{bullet.bullet}}</a>
+													<!--a href='{{bullet.link}}' -->
+											</div>
+										</div>
+										
+									</div>
 						</div>
-					</div> 
-				</div>
-			</div>
+							
+						</div>
+
+
 		</div>
 
     </li>

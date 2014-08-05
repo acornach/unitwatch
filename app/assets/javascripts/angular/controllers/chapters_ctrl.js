@@ -16,7 +16,11 @@ app.controller('ChaptersCtrl', ['$scope', '$resource', function($scope,$resource
   };
 
   
-  	
+  $scope.addMoreItems = function()
+  {
+	var morechapters = $scope.chapters;
+	$scope.chapters.push(morechapters);
+  }
   
   $scope.deleteChapter = function(id,idx){
 	Chapter.delete(id);

@@ -1,6 +1,7 @@
-app.controller('BulletsCtrl', ['$scope', '$resource', function($scope,$resource) {
+app.controller('BulletsCtrl', ['$scope', '$resource',  function($scope,$resource) {
   //$scope.chapters = Chapter.all();
   //var chapters = {};
+  $scope.bullets =[];
     
   $scope.init = function(id)
   {
@@ -13,10 +14,12 @@ app.controller('BulletsCtrl', ['$scope', '$resource', function($scope,$resource)
 	
      $scope.bullets = $resource('/api/chapters/'+id+'/bullets/').query();
     //console.log($scope.bullets);
+	
+	
+	
   };
 
-  
-  	
+ 
   
   $scope.deleteBullet = function(id,idx){
 	Bullet.delete(id);

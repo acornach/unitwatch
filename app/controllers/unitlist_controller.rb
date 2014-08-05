@@ -5,4 +5,10 @@ class UnitlistController < ApplicationController
   def testview
 	
   end
+  def modalview
+	
+  end
+  def tooltipview
+  
+  end
 end

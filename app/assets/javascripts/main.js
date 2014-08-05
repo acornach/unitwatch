@@ -1,1 +1,1 @@
-var app = angular.module('UnitWatch',['ngResource']);
+var app = angular.module('UnitWatch',['ngResource','ui.bootstrap']);
