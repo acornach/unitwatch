@@ -23,10 +23,15 @@ h1 {
     margin: 0;
     padding: 0;
     border: 0;
-
+	overflow:none;
     width: 2000px;
 }
-
+.repeatedBlockOfChapters {
+	float: left;
+	display: inline-block;
+	overflow:none;
+	width: 2000%;
+}
 .book {
     float: left;
 
