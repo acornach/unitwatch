@@ -24,7 +24,7 @@ app.controller('SliderCtrl',['$scope','$element',function($scope, $element){
 app.controller('RightCtrl',['$scope','$element',function($scope,$element){
 //console.log($element.$parent);
 	var test = angular.element($scope.$parent);
-	console.log(test);
+	//console.log(test);
 	
 
 	setInterval(function() {
@@ -38,18 +38,36 @@ app.controller('RightCtrl',['$scope','$element',function($scope,$element){
 	
 }]);
 
+app.directive('chapterRepeat',function(){
+	return {
+	
+		restrict: 'E',
+		templateUrl: 'helperdiv.html'
+	
+	};
+
+});
+
+app.controller('PositionCtrl', ['$scope','$element',function($scope,$element){
+
+	var divs = $element.find('.books');
+	console.log(divs.offset());
+
+
+}]);
+
 app.controller('LeftCtrl',['$scope','$element',function($scope,$element){
 	//console.log($element.$parent);
 	var test = angular.element($scope.$parent);
-	console.log(test);
+	//console.log(test);
 	
 
 	setInterval(function() {
 		if($element.is(":hover"))
 		{
 			var left = parseInt($element.parent().find('.track').css('left'));
-			console.log($element.parent().find('.track').css('left', left + 2));
-			console.log("hovering");
+			$element.parent().find('.track').css('left', left + 2);
+			//console.log("hovering");
 		}
 	});
 	/*

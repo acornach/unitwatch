@@ -11,60 +11,14 @@
 			<div class="track" id="track{{unit.id}}">
 			
 				<!-- <customDirective_InfiniteChapters></customDirective_InfiniteChapters> -->
-				<div class="repeatedBlockOfChapters">
-						<!--<chapter-repeat></chapter-repeat>-->
-						
-						<div ng-repeat="chapter in chapters">
-							<div class="book">{{chapter.title}}
-							
-									<div ng-controller="BulletsCtrl" ng-init="init(chapter.id)">
-
-										<div class="floatingOverDiv">
-											<div class="bulletDiv" ng-repeat="bullet in bullets">
-													<a href='http://www.uaf.edu/' > * {{bullet.bullet}}</a>
-													<!--a href='{{bullet.link}}' -->
-											</div>
-										</div>
-										
-									</div>
-						</div>	
-						</div>
-						<div ng-repeat="chapter in chapters">
-							<div class="book">{{chapter.title}}
-							
-									<div ng-controller="BulletsCtrl" ng-init="init(chapter.id)">
-
-										<div class="floatingOverDiv">
-											<div class="bulletDiv" ng-repeat="bullet in bullets">
-													<a href='http://www.uaf.edu/' > * {{bullet.bullet}}</a>
-													<!--a href='{{bullet.link}}' -->
-											</div>
-										</div>
-										
-									</div>
-						</div>
-							
-						</div>
-						<div ng-repeat="chapter in chapters">
-							<div class="book">{{chapter.title}}
-							
-									<div ng-controller="BulletsCtrl" ng-init="init(chapter.id)">
-
-										<div class="floatingOverDiv">
-											<div class="bulletDiv" ng-repeat="bullet in bullets">
-													<a href='http://www.uaf.edu/' > * {{bullet.bullet}}</a>
-													<!--a href='{{bullet.link}}' -->
-											</div>
-										</div>
-										
-									</div>
-						</div>
-							
-						</div>
+				<div class="repeatedBlockOfChapters" ng-controller="PositionCtrl">
+						<chapter-repeat></chapter-repeat>
+						<chapter-repeat></chapter-repeat>
+						<chapter-repeat></chapter-repeat>
 				</div>
+			</div>
 
 
-		</div>
 		</div>
 		</div>
     </li>

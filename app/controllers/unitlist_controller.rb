@@ -11,4 +11,7 @@ class UnitlistController < ApplicationController
   def tooltipview
   
   end
+  def helperdiv
+  end
+
 end
