@@ -10,7 +10,7 @@ app.controller('BulletsCtrl', ['$scope', '$resource',  function($scope,$resource
     //Based on passed argument you can make a call to resource
     //and initialize more objects
     //$resource.getMeBond(007)
-	console.log(id);
+	//console.log(id);
 	
      $scope.bullets = $resource('/api/chapters/'+id+'/bullets/').query();
     //console.log($scope.bullets);
