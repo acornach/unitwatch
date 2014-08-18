@@ -1,14 +1,13 @@
 <div class="books" ng-repeat="chapter in chapters">
-							<div class="book">{{chapter.title}}
-							
-									<div ng-controller="BulletsCtrl" ng-init="init(chapter.id)">
-
-										<div class="floatingOverDiv">
-											<div class="bulletDiv" ng-repeat="bullet in bullets">
+							<div class="book" ng-controller="ToolTipCtrl">
+									{{chapter.title}}
+										<div class='floatingOverDiv'>
+										<div ng-controller='BulletsCtrl' ng-init='init(chapter.id)'>
+											<div class='bulletDiv' ng-repeat='bullet in bullets'>
 													<a href='http://www.uaf.edu/' > * {{bullet.bullet}}</a>
 													<!--a href='{{bullet.link}}' -->
 											</div>
+											</div>
 										</div>
-										
-									</div>
+
 						</div>

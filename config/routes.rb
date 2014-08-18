@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 	end
   end
   
-  get 'unitlist/tooltip.html'
+  get 'unitlist/tooltip'
   get 'unitlist/helperdiv'
   get 'unitlist/testview'
   get 'unitlist/modalview'

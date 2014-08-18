@@ -16,4 +16,6 @@
 //= require angular-resource
 //= require main.js
 //= require_tree ./angular
+//= require_tree ./jquery.qtip.custom
 //= require_tree .
+

@@ -75,11 +75,8 @@ h1 {
 
 .floatingOverDiv
 {
-
- position: absolute;
  overflow: none;
-  opacity: .9;
-
+ visibility: hidden;
 }
 
 .bulletDiv {
@@ -96,15 +93,7 @@ h1 {
 
 }
 
-.book:hover .floatingOverDiv{
-transition-delay: 0.5s;
- background-color: white;
 
-}
 
-.book:hover .bulletDiv {
-	transition-delay: 0.5s;
-	visibility: visible;
 
-}
 

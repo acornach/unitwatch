@@ -93,8 +93,8 @@ $( document ).ready(function() {
 	for(i=1;i<5;i++){
 		var leftShift = parseInt($('#track'+i).find('.repeatedBlockOfChapters').width()) / 2000;
 		var currentLeft = parseInt($('#track'+i).css('left'));
-		console.log('#track'+i + '  ' +leftShift);
-		console.log('#track'+i + '  ' +currentLeft);
+		//console.log('#track'+i + '  ' +leftShift);
+		//console.log('#track'+i + '  ' +currentLeft);
 					
 		//$('#track1').css('left',currentLeft - leftShift/3);
 	}
