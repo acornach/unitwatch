@@ -15,14 +15,22 @@ app.controller('ToolTipCtrl', ['$scope','$element', function ($scope,$element) {
              delay: 700
          },
 		position: {
-			 my: 'bottom left',
-			 at: 'top right'
+			 my: 'center left',
+			 at: 'center right'
              /*target: 'mouse', // Use the mouse position as the position origin
              adjust: {
                  // Don't adjust continuously the mouse, just use initial position
                  mouse: false
              }*/ 
-         }
+         },
+		 style: {
+			tip: {
+                corner: true,
+                width: 10,
+                height: 5
+            },
+            classes: 'qtip-rounded qtip-shadow qtip-tipped qtip-blue'
+		 }
 	});
 	
 	
