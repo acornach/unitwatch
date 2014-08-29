@@ -3,7 +3,8 @@
 <div ng-controller="ChaptersCtrl" ng-init="init(<%= @unit.id %>)">
   <ul>
     <li ng-repeat="chapter in chapters">
-      {{chapter.title}}
+      {{chapter.title}}<br />
+	  {{chapter.blurb}}
 	  <a href = '' ng-click="deleteChapter(chapter.id,$index)">Delete</a>
     </li>
   </ul>
