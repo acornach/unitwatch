@@ -1,4 +1,5 @@
-<div class="books" ng-repeat="chapter in chapters">
+<div ng-controller="SliderCtrl" >
+<div class="books li" ng-repeat="chapter in chapters" >
 							<div class="book" ng-controller="ToolTipCtrl">
 									{{chapter.title}}
 										<div class='floatingOverDiv'>
@@ -13,5 +14,6 @@
 											</div>
 										
 										</div>
-
+</div>
 						</div>
+</div>

@@ -1,7 +1,7 @@
 app.controller('ToolTipCtrl', ['$scope','$element', function ($scope,$element) { 
     var tipTemplate = "<div ng-controller='BulletsCtrl' ng-init='init(chapter.id)'><div class='floatingOverDiv'><div class='bulletDiv' ng-repeat='bullet in bullets'><a href='http://www.uaf.edu/'>*{{bullet.bullet}}</a></div></div></div>";
 
-	console.log('$element');
+	//console.log('$element');
 	//add a qtip to each element
 	$element.qtip({
 		content: {

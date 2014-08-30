@@ -17,17 +17,19 @@
 
 });*/
 
-app.controller('SliderCtrl',['$scope','$element',function($scope, $element){
+app.controller('SliderCtrl',['$scope','$element', '$timeout',function($scope, $element,$timeout){
+	
+	$timeout(function() {
+	$element.slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1
+		})
+	});
+	
 	//console.log($element);
-	//var test = angular.element($scope.$parent);
-	//shiftLeft(function(){
-	/*	if($element.find('.track')){
-			var leftShift = parseInt($element.find('.track').width());
-			console.log(leftShift);
-			
-			$element.find('.track').css('left',leftShift/3);
-			}*/
-	//});
+	//console.log($element.find('li:first').before($element.find('li:last')));
+	
 }]);
 
 
@@ -64,6 +66,7 @@ app.controller('LeftCtrl',['$scope','$element',function($scope,$element){
 
 app.controller('WrapControl',['$scope','$element',function($scope,$element){
 
+  
 
 
 }]);
@@ -88,17 +91,7 @@ app.controller('PositionCtrl', ['$scope','$element',function($scope,$element){
 
 
 
-//<wrap-scroll>, might want to switch to an atrribute
-$( document ).ready(function() {
-	for(i=1;i<5;i++){
-		var leftShift = parseInt($('#track'+i).find('.repeatedBlockOfChapters').width()) / 2000;
-		var currentLeft = parseInt($('#track'+i).css('left'));
-		//console.log('#track'+i + '  ' +leftShift);
-		//console.log('#track'+i + '  ' +currentLeft);
-					
-		//$('#track1').css('left',currentLeft - leftShift/3);
-	}
-});
+
 /**
 setInterval(function() {
 

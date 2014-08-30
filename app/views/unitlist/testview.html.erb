@@ -4,16 +4,16 @@
     <li ng-repeat="unit in units">
     <strong>  {{unit.title}} </strong>
 		
-		<div class="slider" ng-controller="ChaptersCtrl" ng-init="init(unit.id)">
-		<div ng-controller="SliderCtrl">
+		<div class="slider carousel_container" ng-controller="ChaptersCtrl" ng-init="init(unit.id)">
+		<div>
 		    <div id="left{{unit.id}}" ng-controller="LeftCtrl" class="left">&lt;</div>
 			<div id="right{{unit.id}}" ng-controller="RightCtrl" class="right">&gt;</div>
-			<div class="track" id="track{{unit.id}}">
+			<div class="track carousel_inner" id="track{{unit.id}}">
 			
 				<!-- <customDirective_InfiniteChapters></customDirective_InfiniteChapters> -->
-				<div class="repeatedBlockOfChapters" ng-controller="PositionCtrl">
+				<ul class="repeatedBlockOfChapters ul" ng-controller="PositionCtrl">
 						<chapter-repeat></chapter-repeat>
-				</div>
+				</ul>
 			</div>
 
 

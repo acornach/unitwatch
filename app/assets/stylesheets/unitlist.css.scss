@@ -24,10 +24,31 @@ body {
     overflow: hidden;
 }
 
+.carousel_inner {
+//	float: left;
+//	width: auto;
+//	overflow: hidden;
+	
+}
+
+.ul {
+//	position: relative;
+//	left:-210px;
+//	width: 9999px;
+//	margin: 0px;
+}
+
+.ul .li {
+
+//  float: left;
+//  width: 200px;
+
+}
+
 .track {
-    position: absolute;
+    position: absolute;//absolute allows scrolling inch-by inch the way it was initially done
     top: 10px;
-    left: 10px;
+    //left: -270px;
     z-index: 100;
     margin: 0;
     padding: 0;
@@ -36,23 +57,25 @@ body {
     #width: 2000px;
 	width: auto;
 }
+
 .repeatedBlockOfChapters {
 	float: left;
 	display: inline-block;
 	overflow:none;
 	width: 2000%
 }
+
 .books{
     float: left;
 	display: inline-block;
 	overflow: none;
-    margin: 0;
+   margin: 0;
     margin-right: 10px;
     padding: 0;
     border: 0;
     
-    width: 200px;
-    height: 250px;
+   width: 200px;
+   height: 250px;
     background-color: gold;
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;

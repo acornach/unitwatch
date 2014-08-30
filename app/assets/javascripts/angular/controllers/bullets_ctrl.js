@@ -19,7 +19,8 @@ app.controller('BulletsCtrl', ['$scope', '$resource',  function($scope,$resource
 	
   };
 
- 
+
+  
   
   $scope.deleteBullet = function(id,idx){
 	Bullet.delete(id);

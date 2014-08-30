@@ -1,7 +1,8 @@
 app.controller('ChaptersCtrl', ['$scope', '$resource', function($scope,$resource) {
   //$scope.chapters = Chapter.all();
-  //var chapters = {};
-    
+  $scope.chapters = [];
+  //var chapters;
+  //$scope.chapters = [];
   $scope.init = function(id)
   {
     //This function is sort of private constructor for controller
@@ -12,15 +13,23 @@ app.controller('ChaptersCtrl', ['$scope', '$resource', function($scope,$resource
 	//console.log(id);
 	
      $scope.chapters = $resource('/api/units/'+id+'/chapters/').query();
-    //console.log($scope.chapters);
+
   };
 
+   
+ /* $scope.reOrderLeft = function() {
+	var temp = $scope.chapters;
+		$scope.chapters[0] = $scope.chapters[$scope.chapters.length-1];
+		$scope.chapters[$scope.chapters.length-1] = temp;
+		console.lot("reorderleft");
+		console.log(temp);
+  };*/
   
   $scope.addMoreItems = function()
   {
 	var morechapters = $scope.chapters;
 	$scope.chapters.push(morechapters);
-  }
+  };
   
   $scope.deleteChapter = function(id,idx){
 	Chapter.delete(id);
