@@ -35,14 +35,30 @@ app.controller('SliderCtrl',['$scope','$element',function($scope, $element){
 app.controller('RightCtrl',['$scope','$element',function($scope,$element){
 //console.log($element.$parent);
 	var test = angular.element($scope.$parent);
-	//console.log(test);
+	var rightDiv,leftDiv;
+	var initialTrackPos = parseInt($element.parent().find('.track').css('left'));
 	
 	setInterval(function() {
 		if($element.is(":hover"))
 		{
+		//var divs = $element.parent().find('.track').find('.books');
+			//var trackID = parseInt($element.parent().find('.track').attr('id'));
+			
+			var trackID = $element.parent().find('.track').attr('id');
+			//console.log(trackID);
+			//var array = $.map(divs,function(value,index) { return[value];});
+			divs = $('#'+trackID).find('.books');
+			
+			rightDiv = divs.last();
+			leftDiv = divs.first();
 			var left = parseInt($element.parent().find('.track').css('left'));
 			$element.parent().find('.track').css('left', left - 2);
 			//console.log("hovering");
+			if(initialTrackPos-200>left)
+			{
+				leftDiv.insertBefore(rightDiv);
+				$element.parent().find('.track').css('left', left + 200);
+			}
 		}
 	});
 }]);
@@ -50,13 +66,36 @@ app.controller('RightCtrl',['$scope','$element',function($scope,$element){
 app.controller('LeftCtrl',['$scope','$element',function($scope,$element){
 	//console.log($element.$parent);
 	var test = angular.element($scope.$parent);
-	//console.log(test);
-	
+	var rightDiv,leftDiv;
+	var initialTrackPos = parseInt($element.parent().find('.track').css('left'));
+	//console.log(initialTrackPos);
+	//console.log(rightDiv);
 	setInterval(function() {
 		if($element.is(":hover"))
 		{
+			
+			//var divs = $element.parent().find('.track').find('.books');
+			//var trackID = parseInt($element.parent().find('.track').attr('id'));
+			
+			var trackID = $element.parent().find('.track').attr('id');
+			//console.log(trackID);
+			//var array = $.map(divs,function(value,index) { return[value];});
+			divs = $('#'+trackID).find('.books');
+			
+			rightDiv = divs.last();
+			leftDiv = divs.first();
 			var left = parseInt($element.parent().find('.track').css('left'));
+			
 			$element.parent().find('.track').css('left', left + 2);
+			if(initialTrackPos<left)
+			{
+				rightDiv.insertBefore(leftDiv);
+				$element.parent().find('.track').css('left', left - 200);
+			}//leftDiv.insertAfter(rightDiv);
+			//console.log(leftDiv.position());
+			//leftDiv.insertAfter(rightDiv);//({"float":"left"});
+			
+			
 			//console.log("hovering");
 		}
 	});

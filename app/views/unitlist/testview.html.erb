@@ -6,9 +6,9 @@
 		
 		<div class="slider" ng-controller="ChaptersCtrl" ng-init="init(unit.id)">
 		<div ng-controller="SliderCtrl">
-		    <div id="left{{unit.id}}" ng-controller="LeftCtrl" class="left">&lt;</div>
-			<div id="right{{unit.id}}" ng-controller="RightCtrl" class="right">&gt;</div>
-			<div class="track" id="track{{unit.id}}">
+		    <div id="{{unit.id}}left" ng-controller="LeftCtrl" class="left">&lt;</div>
+			<div id="{{unit.id}}right" ng-controller="RightCtrl" class="right">&gt;</div>
+			<div class="track" id="{{unit.id}}track">
 			
 				<!-- <customDirective_InfiniteChapters></customDirective_InfiniteChapters> -->
 				<div class="repeatedBlockOfChapters" ng-controller="PositionCtrl">
