@@ -16,7 +16,11 @@ app.controller('ToolTipCtrl', ['$scope','$element', function ($scope,$element) {
          },
 		position: {
 			 my: 'center left',
-			 at: 'center right'
+			 at: 'center right',
+			 viewport : $(window),
+			adjust:{
+				method: 'flip'
+			}
              /*target: 'mouse', // Use the mouse position as the position origin
              adjust: {
                  // Don't adjust continuously the mouse, just use initial position
