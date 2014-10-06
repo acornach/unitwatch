@@ -39,7 +39,7 @@ app.controller('RightCtrl',['$scope','$element',function($scope,$element){
 
 			if(initialTrackPos-200>left)
 			{
-				leftDiv.insertBefore(rightDiv);
+				leftDiv.insertAfter(rightDiv);
 				$element.parent().find('.track').css('left', left + 200);
 			}
 		}

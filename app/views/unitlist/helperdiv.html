@@ -5,6 +5,7 @@
 										<div class='blurb'>
 										{{chapter.blurb}}
 										</div>
+										<hr>
 										<div ng-controller='BulletsCtrl' ng-init='init(chapter.id)'>
 											<div class='bulletDiv' ng-repeat='bullet in bullets'>
 													<a href='http://www.uaf.edu/' > * {{bullet.bullet}}</a>
