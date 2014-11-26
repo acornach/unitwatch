@@ -1,0 +1,16 @@
+<div ng-repeat="unit in units">
+	{{unit.title}}
+	<div class="chapterHeader" ng-controller="ChaptersCtrl">
+	<div ng-repeat="chapter in chapters">
+							<div class="book" ng-controller="ToolTipCtrl">
+									{{chapter.title}}
+										<div class='floatingOverDiv'>
+										<div class='blurb'>
+										{{chapter.blurb}}
+										</div>
+										<hr>
+
+										
+										</div>
+</div></div>
+						</div></div>

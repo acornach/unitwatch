@@ -1,5 +1,29 @@
 <h1>FYE Manual</h1>
 <div ng-controller="UnitsCtrl">
+
+
+ <div id="centernav">
+    <div id="dropnav">
+        <ul>
+
+		<div ng-repeat="unit in units">
+			<li id="main">
+				<a href="#">{{unit.title}}</a>
+				<ul id="subnav">
+                      <li><a href="#">sub menu item 1</a></li>
+                      <li><a href="#">sub menu item 2</a></li>
+                      <li><a href="#">sub menu item 3</a></li>
+                      <li><a href="#">sub menu item 4</a></li>
+                </ul>      
+			</li>
+	</div>
+		
+
+        </ul>    
+    </div>
+</div>	
+	
+
   <ul>
     <li ng-repeat="unit in units">
     <strong>  {{unit.title}} </strong>

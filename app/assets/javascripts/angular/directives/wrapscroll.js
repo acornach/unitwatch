@@ -47,8 +47,11 @@ app.controller('RightCtrl',['$scope','$element',function($scope,$element){
 }]);
 
 
+
+
 //TODO: Hide if width is less than screen width
 app.controller('LeftCtrl',['$scope','$element',function($scope,$element){
+
 	var test = angular.element($scope.$parent);
 	var rightDiv,leftDiv;
 	var initialTrackPos = parseInt($element.parent().find('.track').css('left'));
@@ -104,6 +107,16 @@ app.directive('chapterRepeat',function(){
 	
 		restrict: 'E',
 		templateUrl: 'helperdiv.html'
+	
+	};
+
+});
+
+app.directive('headerDirective',function(){
+	return {
+	
+		restrict: 'E',
+		templateUrl: 'headerHelper.html'
 	
 	};
 
