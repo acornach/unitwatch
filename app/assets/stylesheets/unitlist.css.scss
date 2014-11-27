@@ -15,12 +15,10 @@ body {
 
 .slider {
     position: relative;
-    
     background-color: blue;
     height: 250px;
     margin: 10px;
-    padding: 10px;
-    
+    padding: 10px;    
     overflow: hidden;
 }
 
@@ -36,12 +34,14 @@ body {
     #width: 2000px;
 	width: auto;
 }
+
 .repeatedBlockOfChapters {
 	float: left;
 	display: inline-block;
 	overflow:none;
 	width: 2000%
 }
+
 .books{
 	float: left;
     display: inline-block;
@@ -49,8 +49,7 @@ body {
     margin: 0;
     margin-right: 10px;
     padding: 0;
-    border: 0;
-    
+    border: 0;    
     width: 200px;
     height: 250px;
     background-color: gold;
@@ -73,22 +72,11 @@ ul {clear: both;}
 }
 
 .headerBlock {
-	    margin-right: auto;
+    margin-right: auto;
 	margin-left: auto;
 	text-align: center;
 }
 
-/* Derived from http://www.devinrolsen.com/pure-css-horizontal-menu/ */
-
-#pagebody { position: inherit !important; width: 100%; } /* DO NOT EDIT */
-#pagebody-inner { position: inherit !important; width: 100%; } /* DO NOT EDIT */
-
-#alpha, #beta, #gamma, #delta {
-    display: inline; /* DO NOT EDIT */
-    position: inherit !important; /* DO NOT EDIT */
-    float: left; /* DO NOT EDIT */
-    min-height: 1px; /* DO NOT EDIT */
-}
 
 #centernav {
   width: 1000px; /* if you want your nav centered, set this to the width of your container, if you don't want it centered, change this number to 100% */
@@ -104,7 +92,7 @@ ul {clear: both;}
 {margin:0px; padding:0px;}
 
 #dropnav ul li
-{display:inline; float:left; list-style:none; margin-left:15px; position:relative; height:25px; width: 150px;} /* only edit the last 2 items - sets the width of the main menu */
+{display:inline; float:left; list-style:none; margin-left:15px; position:relative; height:25px;} /* only edit the last 2 items - sets the width of the main menu */
 
 #dropnav li a
 {color:#FFF; text-decoration:none;} /* Changes the link color of items on the main menu */
@@ -113,7 +101,7 @@ ul {clear: both;}
 {color:#900; text-decoration:none;}/* Changes the hover color of items on the main menu */
 
 #dropnav li ul
-{margin:0px; padding:0px; display:none; position:absolute; left:0px; z-index: 99; top:25px; background-color:blue;} /* Only edit the last 2 items - set the top margin and background color of the submenus */
+{margin:0px; padding:0px; display:none; position:absolute; left:0px; z-index: 110; top:25px; background-color:blue;} /* Only edit the last 2 items - set the top margin and background color of the submenus */
 
 #dropnav li:hover ul
 {display:block; width:150px;} /* sets the width of the submenus */
@@ -128,7 +116,6 @@ ul {clear: both;}
 {color:#900; text-decoration:none;} /* Changes the hover color of items in the submenu */
 
 li#main  {padding-top: 2px;} /* Sets the padding of items in the main menu */
-
 
 .header{
 	margin: 0;
@@ -150,9 +137,11 @@ li#main  {padding-top: 2px;} /* Sets the padding of items in the main menu */
     cursor: pointer;
     z-index: 1002;
 }
+
 .left {
     left: 0;
 }
+
 .right {
     right: 0;
 }
@@ -160,8 +149,7 @@ li#main  {padding-top: 2px;} /* Sets the padding of items in the main menu */
 .floatingOverDiv
 {
  overflow: none;
- visibility: hidden;
- 
+ visibility: hidden; 
 }
 
 .blurb
@@ -178,15 +166,9 @@ line-height: 110%;
 	
 }
 
-
 .book .bulletDiv {
 
 	visibility: hidden;
 	overflow: none;
 
 }
-
-
-
-
-
